@@ -2586,6 +2586,25 @@ html {
         border-color: rgba(255, 255, 255, 0.7) !important;
         color: var(--white) !important;
     }
+    /* Mobile Modal & Safari Bottom Bar Padding Fixes */
+    .checkout-modal-content {
+        padding: 24px 18px 80px 18px !important;
+        max-height: 85vh !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .checkout-form-container {
+        padding-bottom: 20px !important;
+    }
+
+    .place-order-btn {
+        margin-top: 16px !important;
+        margin-bottom: 40px !important;
+        padding: 16px 20px !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2597,5 +2616,12 @@ html {
     }
     .logo {
         font-size: 18px !important;
+    }
+    .checkout-modal-content {
+        padding: 20px 14px 90px 14px !important;
+        max-height: 84vh !important;
+    }
+    .place-order-btn {
+        margin-bottom: 50px !important;
     }
 }

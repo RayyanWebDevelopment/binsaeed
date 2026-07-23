@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Saeed Fabrics | Premium Luxury Lawn Collection</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Explore the new summer Lawn 2026 collection by Bin Saeed Fabrics. Discover premium embroidered, printed, and festive traditional dresses for women. High-quality fabric, vibrant colors.">
+    <meta name="keywords" content="Bin Saeed Fabrics, Women Clothing, Pakistani Lawn, Luxury Lawn, Embroidered Lawn, Printed Lawn, Eid Collection">
+    <meta name="author" content="Bin Saeed Fabrics">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons (FontAwesome CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); // Isko apne Pixel ID se replace karein
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <!-- Toast Notification -->
+    <div id="toast-msg" class="toast-msg">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-text">Item added to cart!</span>
+    </div>
+
+    <!-- Interactive Search Bar Overlay -->
+    <div id="search-overlay" class="search-overlay">
+        <button class="search-close-btn" aria-label="Close search"><i class="fas fa-times"></i></button>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search lawn articles, designs...">
+            <label for="search-input" style="display:none">Search</label>
+        </div>
+    </div>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3 class="cart-title">Shopping Bag <span id="cart-count-text" style="font-weight: normal; font-size: 16px;"></span></h3>
+            <button class="cart-close-btn" aria-label="Close cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items-container">
+            <!-- Appended dynamically via app.js -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-row">
+                <span class="cart-summary-label">Subtotal</span>
+                <span id="cart-total" class="cart-summary-value">Rs. 0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div id="quick-view-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" aria-label="Close product view"><i class="fas fa-times"></i></button>
+            <div class="modal-image-wrapper">
+                <img id="modal-product-image" src="" alt="Product Image">
+            </div>
+            <div class="modal-details">
+                <!-- Appended dynamically via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Success Celebration Modal -->
+    <div id="checkout-success-modal" class="checkout-success-modal">
+        <div class="modal-backdrop"></div>
+        <div class="success-card">
+            <div class="success-icon-wrapper">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2 class="success-title">Order Placed!</h2>
+            <p class="success-desc">Thank you for shopping with Bin Saeed Fabrics. Your luxurious lawn suits will be at your doorstep shortly. A verification email has been sent to you.</p>
+            <button class="btn btn-primary success-close-btn" style="width: 100%;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content checkout-modal-content">
+            <button class="modal-close-btn checkout-modal-close-btn" aria-label="Close checkout"><i class="fas fa-times"></i></button>
+            <div class="checkout-form-container">
+                <h2 class="checkout-form-title">Shipping & Order Details</h2>
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-name">Full Name</label>
+                            <input type="text" id="checkout-name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-email">Email Address</label>
+                            <input type="email" id="checkout-email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkout-phone">Phone Number</label>
+                            <input type="tel" id="checkout-phone" required placeholder="+92 300 1234567">
+                        </div>
+                        <div class="form-group" style="display: none;">
+                            <label for="checkout-payment">Payment Method</label>
+                            <select id="checkout-payment" required>
+                                <option value="cod">Cash on Delivery (COD)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout-address">Shipping Address</label>
+                        <textarea id="checkout-address" rows="3" required placeholder="Street address, apartment, building."></textarea>
+                    </div>
+                    <div class="form-row-three">
+                        <div class="form-group">
+                            <label for="checkout-city">City</label>
+                            <input type="text" id="checkout-city" required placeholder="Karachi">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-province">Province</label>
+                            <input type="text" id="checkout-province" required placeholder="Sindh">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-postal">Postal Code</label>
+                            <input type="text" id="checkout-postal" required placeholder="75300">
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-items-list" class="checkout-items-list"></div>
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">Rs. 0</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Shipping</span>
+                            <span id="checkout-shipping">Free</span>
+                        </div>
+                        <div class="summary-line total-line">
+                            <span>Total</span>
+                            <span id="checkout-total">Rs. 0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn place-order-btn">
+                        <i class="fab fa-whatsapp" style="font-size: 16px;"></i> Order on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Header & Sticky Glassmorphic Navbar -->
+    <header>
+        <div class="container header-container">
+            <!-- Mobile Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="logo" id="main-logo">BIN SAEED<span>FABRICS</span></a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#collection">Lawn Collection</a>
+                <a href="#heritage">Our Story</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+
+            <!-- Actions (Search, Cart Icons) -->
+            <div class="header-actions">
+                <button class="header-icon search-toggle" aria-label="Open search drawer" id="search-btn"><i class="fas fa-search"></i></button>
+                <button class="header-icon cart-toggle cart-icon-wrapper" aria-label="Open cart bag" id="cart-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Parallax Hero Banner -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="images/luxury_lawn_banner.png" alt="Bin Saeed Summer Luxury Lawn Banner" class="hero-slide active">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tagline" style="color: #ffffff; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">Exquisite Pure Fabrics</span>
+                <h1 class="hero-title">Luxury Lawn <span>Collection '26</span></h1>
+                <p class="hero-desc">Discover the harmony of delicate hand-embroidered details and breathable pure lawn fabrics. Handcrafted to elevate your summer wardrobe with premium traditional elegance.</p>
+                <div class="hero-btn-group">
+                    <a href="#collection" class="btn btn-primary">Shop Collection</a>
+                    <a href="#heritage" class="btn btn-outline">Our Heritage</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Banner & Category Selectors -->
+    <section class="categories-section reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="subtitle">Curated Wardrobe</span>
+                <h2 class="section-title">Explore Collections</h2>
+            </div>
+            
+            <div class="categories-grid">
+                <!-- Lawn Collection (Active) -->
+                <div class="category-card" onclick="window.location.hash='#collection'">
+                    <img src="images/collection_banner.png" alt="Lawn Collection" class="category-img">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge">Active</span>
+                        <h3 class="category-title">Premium Lawn</h3>
+                        <p class="category-link">Shop Collection <i class="fas fa-arrow-right"></i></p>
+                    </div>
+                </div>
+
+                <!-- Chiffon Collection (Coming Soon) -->
+                <div class="category-card disabled-category">
+                    <img src="images/pure_chiffon.png" alt="Chiffon Collection" class="category-img" style="filter: grayscale(0.4);">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge coming-soon-badge">Coming Soon</span>
+                        <h3 class="category-title">Pure Chiffon</h3>
+                        <p class="category-link">Previewing Soon <i class="fas fa-lock"></i></p>
+                    </div>
+                </div>
+
+                <!-- Cotton Net Collection (Coming Soon) -->
+                <div class="category-card disabled-category">
+                    <img src="images/cotton_net.png" alt="Cotton Net Collection" class="category-img" style="filter: grayscale(0.4);">
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-badge coming-soon-badge">Coming Soon</span>
+                        <h3 class="category-title">Cotton Net</h3>
+                        <p class="category-link">Previewing Soon <i class="fas fa-lock"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Lawn Grid Section -->
+    <section class="products-section" id="collection">
+        <div class="container">
+            <div class="section-title-wrapper reveal">
+                <span class="subtitle">Lawn 2026 Collection</span>
+                <h2 class="section-title">New Arrivals</h2>
+            </div>
+
+            <!-- Categories Tabs -->
+            <div class="filter-tabs reveal">
+                <button class="filter-tab active" data-filter="embroidered" id="tab-embroidered">Embroidered</button>
+                <button class="filter-tab disabled-tab" data-filter="printed" id="tab-printed" disabled>Printed (Coming Soon)</button>
+                <button class="filter-tab disabled-tab" data-filter="festive" id="tab-festive" disabled>Festive Luxury (Coming Soon)</button>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Injected dynamically via app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Heritage / Story Section -->
+    <section class="heritage-section" id="heritage">
+        <div class="container">
+            <div class="heritage-grid">
+                <div class="heritage-image reveal">
+                    <img src="images/collection_banner.png" alt="Weaving and Craftsmanship Heritage">
+                </div>
+                <div class="heritage-content reveal">
+                    <span class="subtitle">Craftsmanship & Heritage</span>
+                    <h2 class="heritage-title">The Legacy of Bin Saeed Fabrics</h2>
+                    <p class="heritage-text">For years, Bin Saeed has been synonymous with pure cotton fabrics, intricate traditional embroidery techniques, and timeless elegance. Our design philosophy centers around preserving local craft forms while incorporating modern, chic silhouettes.</p>
+                    <p class="heritage-text">Every article in our Summer Lawn Collection is carefully curated, starting from the selecting of extra-long staple cotton fibers to the detailed handwork by master artisans. Experience luxury that breathes.</p>
+                    <a href="#collection" class="btn btn-primary" style="margin-top: 20px;">Explore Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Highlight Bar -->
+    <section class="features-section reveal">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-usd feature-icon"></i>
+                    <h3 class="feature-title">Cash on Delivery</h3>
+                    <p class="feature-desc">Pay conveniently with cash upon delivery at your doorstep.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-undo feature-icon"></i>
+                    <h3 class="feature-title">Easy Returns</h3>
+                    <p class="feature-desc">Hassle-free 7 days exchanges on unused items</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3 class="feature-title">100% Pure Fabrics</h3>
+                    <p class="feature-desc">We guarantee pure cotton and premium fabrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section reveal" id="reviews">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="subtitle">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="reviews-grid" id="dynamic-reviews-grid" style="transition: opacity 0.5s ease;">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-box reveal">
+                <h3 class="newsletter-title">Join The Club</h3>
+                <p>Subscribe to receive early-access updates on seasonal launches, private sales, and fashion events.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); document.querySelector('.newsletter-success').style.display = 'block'; document.querySelector('.newsletter-form').style.display = 'none';">
+                    <input type="email" class="newsletter-input" placeholder="Your Email Address" required id="newsletter-email">
+                    <label for="newsletter-email" style="display:none">Email</label>
+                    <button type="submit" class="newsletter-submit" id="newsletter-btn">Subscribe</button>
+                </form>
+                <div class="newsletter-success">
+                    <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Thank you! You have been subscribed successfully.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section reveal" id="contact">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-panel">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    <p class="contact-info-desc">Have questions about our collections, orders, or sizing? Drop us a line and our team will get back to you as soon as possible.</p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <p>+92 304 5713194</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-card">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Inquiries</h4>
+                                <p>binsaeedfabrics553@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-panel">
+                    <h3 class="contact-form-title-right">Send Us A Message</h3>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" required placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" required placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-contact-btn">Send Message</button>
+                    </form>
+                    <div id="contact-form-success" class="contact-success-msg" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Thank you! Your message has been sent successfully.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-marquee" id="top-marquee" style="background: var(--dark); color: var(--white); padding: 8px 0; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; overflow: hidden; white-space: nowrap; position: absolute; top: 0; left: 0; width: 100%; z-index: 1001;">
+        <div class="marquee-content" style="display: inline-block; animation: marquee-scroll 20s linear infinite;">
+            Welcome to Bin Saeed Fabrics &nbsp;•&nbsp; Experience the Elegance of Pure Lawn &nbsp;•&nbsp; New Arrivals Available Now &nbsp;•&nbsp; Premium Quality Guaranteed &nbsp;•&nbsp; 
+            Welcome to Bin Saeed Fabrics &nbsp;•&nbsp; Experience the Elegance of Pure Lawn &nbsp;•&nbsp; New Arrivals Available Now &nbsp;•&nbsp; Premium Quality Guaranteed &nbsp;•&nbsp;
+            Welcome to Bin Saeed Fabrics &nbsp;•&nbsp; Experience the Elegance of Pure Lawn &nbsp;•&nbsp; New Arrivals Available Now &nbsp;•&nbsp; Premium Quality Guaranteed &nbsp;•&nbsp;
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4 class="footer-heading">BIN SAEED<span>FABRICS</span></h4>
+                <p class="footer-desc">Premium luxury Pakistani women fashion storefront. Providing breathable cotton lawn, cambric, chiffon, and festive dresses.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61586798584213&ref=PROFILE_EDIT_xav_ig_profile_page_web#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/binsaeedfabrics.pk/" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=923045713194" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Lawn Collection</a></li>
+                    <li><a href="#heritage">Brand Story</a></li>
+                    <li><a href="#newsletter">Subscribe</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Customer Care</h4>
+                <ul class="footer-links">
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#" onclick="event.preventDefault(); document.getElementById('policy-modal').classList.add('open'); document.getElementById('policy-content').innerHTML = shippingPolicyHtml;">Shipping Details</a></li>
+                    <li><a href="#" onclick="event.preventDefault(); document.getElementById('policy-modal').classList.add('open'); document.getElementById('policy-content').innerHTML = faqHtml;">FAQs</a></li>
+                    <li><a href="#" onclick="event.preventDefault(); document.getElementById('policy-modal').classList.add('open'); document.getElementById('policy-content').innerHTML = returnPolicyHtml;">Return & Exchange Policy</a></li>
+                    <li><a href="#" onclick="event.preventDefault(); document.getElementById('policy-modal').classList.add('open'); document.getElementById('policy-content').innerHTML = privacyPolicyHtml;">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Store Information</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-phone-alt"></i> +92 304 5713194</li>
+                    <li><i class="fas fa-envelope"></i> binsaeedfabrics553@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Bin Saeed Fabrics. All Rights Reserved. Crafted for premium elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- General Policy Modal -->
+    <div id="policy-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content" style="max-width: 800px; max-height: 85vh;">
+            <button class="modal-close policy-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body" style="padding: 40px 30px;">
+                <div id="policy-content" style="line-height: 1.8; color: var(--dark); font-size: 15px;">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- App JS -->
+    <script src="app.js"></script>
+</body>
+</html>

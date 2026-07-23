@@ -30,12 +30,12 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.png",
+        "image": "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.webp",
         "images": [
-            "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.png",
-            "images/New folder (21)/Black & White Embroidered Lawn Suit/6a2d5df0-0ba7-4724-b866-798b51e58928.png",
-            "images/New folder (21)/Black & White Embroidered Lawn Suit/9e514d99-deb9-4d76-b2a5-9a45f8d7ddbe.png",
-            "images/New folder (21)/Black & White Embroidered Lawn Suit/dc8124ed-1df2-4cf5-98b1-f7d5385ba547.png"
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.webp",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/6a2d5df0-0ba7-4724-b866-798b51e58928.webp",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/9e514d99-deb9-4d76-b2a5-9a45f8d7ddbe.webp",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/dc8124ed-1df2-4cf5-98b1-f7d5385ba547.webp"
         ],
         "badge": "Hot Sale",
         "description": "Grace your wardrobe with Black & White Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -58,13 +58,13 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Floral Embroidered Lawn Suit/cover.png",
+        "image": "images/New folder (21)/Floral Embroidered Lawn Suit/cover.webp",
         "images": [
-            "images/New folder (21)/Floral Embroidered Lawn Suit/cover.png",
-            "images/New folder (21)/Floral Embroidered Lawn Suit/579f9a46-f13b-46dc-84f8-7fa2da9b3f43.png",
-            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0 (1).png",
-            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0.png",
-            "images/New folder (21)/Floral Embroidered Lawn Suit/8f48ded6-79b9-4347-abd8-576bfa05c581.png"
+            "images/New folder (21)/Floral Embroidered Lawn Suit/cover.webp",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/579f9a46-f13b-46dc-84f8-7fa2da9b3f43.webp",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0 (1).webp",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0.webp",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/8f48ded6-79b9-4347-abd8-576bfa05c581.webp"
         ],
         "badge": "New Arrival",
         "description": "Grace your wardrobe with Floral Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -87,12 +87,12 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.png",
+        "image": "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.webp",
         "images": [
-            "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.png",
-            "images/New folder (21)/Maroon Embroidered Lawn Suit/96800dea-a116-45f9-a19d-b99e1815aafb.png",
-            "images/New folder (21)/Maroon Embroidered Lawn Suit/9ff94a74-cc41-4723-b500-b893367e0ca3.png",
-            "images/New folder (21)/Maroon Embroidered Lawn Suit/ffe28d87-2bf1-434c-8410-7f31f5c41ede.png"
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.webp",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/96800dea-a116-45f9-a19d-b99e1815aafb.webp",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/9ff94a74-cc41-4723-b500-b893367e0ca3.webp",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/ffe28d87-2bf1-434c-8410-7f31f5c41ede.webp"
         ],
         "badge": "Hot Sale",
         "description": "Grace your wardrobe with Maroon Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -115,13 +115,13 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.png",
+        "image": "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.webp",
         "images": [
-            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.png",
-            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/4114fa2d-21ab-4f7c-998a-62281ac38354.png",
-            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/9434ac89-a47d-4a2b-8e9a-0e789d2bc35d.png",
-            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/980a76b2-d69d-41b4-8bb2-67a731f50644.png",
-            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/b337271b-bceb-4ac0-98da-f0304359dcf9.png"
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.webp",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/4114fa2d-21ab-4f7c-998a-62281ac38354.webp",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/9434ac89-a47d-4a2b-8e9a-0e789d2bc35d.webp",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/980a76b2-d69d-41b4-8bb2-67a731f50644.webp",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/b337271b-bceb-4ac0-98da-f0304359dcf9.webp"
         ],
         "badge": "New Arrival",
         "description": "Grace your wardrobe with Navy Embroidered Lawn 3 Piece, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -144,12 +144,12 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Purple Embroidered Lawn Suit/cover.png",
+        "image": "images/New folder (21)/Purple Embroidered Lawn Suit/cover.webp",
         "images": [
-            "images/New folder (21)/Purple Embroidered Lawn Suit/cover.png",
-            "images/New folder (21)/Purple Embroidered Lawn Suit/3.png",
-            "images/New folder (21)/Purple Embroidered Lawn Suit/4.png",
-            "images/New folder (21)/Purple Embroidered Lawn Suit/5.png"
+            "images/New folder (21)/Purple Embroidered Lawn Suit/cover.webp",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/3.webp",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/4.webp",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/5.webp"
         ],
         "badge": "Hot Sale",
         "description": "Grace your wardrobe with Purple Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -172,13 +172,13 @@ const defaultProducts = [
         "categoryLabel": "Embroidered Collection",
         "price": 6500,
         "oldPrice": 8000,
-        "image": "images/New folder (21)/Teal Embroidered Lawn Suit/cover.png",
+        "image": "images/New folder (21)/Teal Embroidered Lawn Suit/cover.webp",
         "images": [
-            "images/New folder (21)/Teal Embroidered Lawn Suit/cover.png",
-            "images/New folder (21)/Teal Embroidered Lawn Suit/1123123.png",
-            "images/New folder (21)/Teal Embroidered Lawn Suit/123123.png",
-            "images/New folder (21)/Teal Embroidered Lawn Suit/991576c9-e44b-48ef-ae3b-71191f07b4b3.png",
-            "images/New folder (21)/Teal Embroidered Lawn Suit/a20a1f0b-8aba-499e-b714-dd827922dd3b.png"
+            "images/New folder (21)/Teal Embroidered Lawn Suit/cover.webp",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/1123123.webp",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/123123.webp",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/991576c9-e44b-48ef-ae3b-71191f07b4b3.webp",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/a20a1f0b-8aba-499e-b714-dd827922dd3b.webp"
         ],
         "badge": "New Arrival",
         "description": "Grace your wardrobe with Teal Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
@@ -517,6 +517,15 @@ function renderProducts(productsToRender = products) {
             </div>
         `;
 
+        productCard.addEventListener("mouseenter", () => {
+            if (product.images) {
+                product.images.forEach(src => {
+                    const pImg = new Image();
+                    pImg.src = src;
+                });
+            }
+        });
+
         productCard.addEventListener("click", () => {
             openProductModal(product.id);
         });
@@ -734,6 +743,14 @@ function openProductModal(productId) {
     if (!product) return;
 
     currentProduct = product;
+    
+    // Preload all product images for instant modal gallery switching
+    if (product.images) {
+        product.images.forEach(src => {
+            const imgPreload = new Image();
+            imgPreload.src = src;
+        });
+    }
     
     // Check stock (Disabled completely)
     const oosSizes = [];

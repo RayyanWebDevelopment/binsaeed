@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Setup</title>
+    <style>
+        body { font-family: sans-serif; background: #f5f6fa; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #000; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #333; }
+        .product-list { margin-top: 30px; }
+        .product-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #ddd; }
+        .product-item img { width: 50px; height: 50px; object-fit: cover; margin-right: 15px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Apne Products Yahan Add Karein</h2>
+        <p>Aapke purane products browser se delete ho gaye hain. Baraye meharbani unhe yahan dubara add kar lein, phir 'Download Code' par click karein. Ek file download hogi. Mujhe bas bata dijiyega, main khud wo file aapke system se utha kar website mein daal dunga!</p>
+        
+        <div class="form-group">
+            <label>Product Name (Naam)</label>
+            <input type="text" id="p-name" placeholder="e.g. Blue Embroidered Suit">
+        </div>
+        <div class="form-group">
+            <label>Price (Qeemat)</label>
+            <input type="number" id="p-price" placeholder="e.g. 6500">
+        </div>
+        <div class="form-group">
+            <label>Images (Ek sath multiple pictures select kar sakte hain)</label>
+            <input type="file" id="p-images" multiple accept="image/*">
+        </div>
+        <button id="add-btn">Add Product</button>
+
+        <div class="product-list" id="product-list">
+            <!-- List of products will appear here -->
+        </div>
+
+        <button id="generate-btn" style="margin-top: 20px; background: #28a745; width: 100%; font-size: 18px; padding: 15px;">💾 Download Products Data</button>
+    </div>
+
+    <script>
+        let products = [];
+        let idCounter = 1;
+
+        document.getElementById('add-btn').addEventListener('click', async () => {
+            const name = document.getElementById('p-name').value;
+            const price = document.getElementById('p-price').value;
+            const files = document.getElementById('p-images').files;
+
+            if (!name || !price || files.length === 0) {
+                alert("Please fill all fields and select at least one image.");
+                return;
+            }
+
+            const base64Images = [];
+            for (let i = 0; i < files.length; i++) {
+                const b64 = await toBase64(files[i]);
+                base64Images.push(b64);
+            }
+
+            const newProduct = {
+                id: idCounter++,
+                name: name,
+                category: "embroidered",
+                categoryLabel: "Embroidered Collection",
+                price: parseInt(price),
+                image: base64Images[0],
+                images: base64Images,
+                badge: "Hot Sale",
+                description: name + " - Premium Quality Lawn Suit. Perfect for summer and festive wear.",
+                fabric: "Premium Lawn",
+                details: ["Premium Lawn", "3 Piece Suit", "Embroidered Shirt", "Dyed Trouser", "Summer Collection"]
+            };
+
+            products.push(newProduct);
+            renderList();
+
+            // Clear inputs
+            document.getElementById('p-name').value = '';
+            document.getElementById('p-price').value = '';
+            document.getElementById('p-images').value = '';
+        });
+
+        function renderList() {
+            const list = document.getElementById('product-list');
+            list.innerHTML = '<h3>Added Products:</h3>';
+            products.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'product-item';
+                div.innerHTML = `<img src="${p.image}"> <div><strong>${p.name}</strong><br>Rs. ${p.price}</div>`;
+                list.appendChild(div);
+            });
+        }
+
+        document.getElementById('generate-btn').addEventListener('click', () => {
+            if (products.length === 0) {
+                alert("Please add at least one product first!");
+                return;
+            }
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(products));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href",     dataStr);
+            downloadAnchorNode.setAttribute("download", "my_products_data.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            alert("File 'my_products_data.json' download ho gayi hai! Ab chat mein mujhe bata dein.");
+        });
+
+        function toBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
+</body>
+</html>

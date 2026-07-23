@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Export Products</title>
+</head>
+<body style="padding: 50px; font-family: sans-serif;">
+    <h2>Apne Products Yahan Se Copy Karein:</h2>
+    <p>Neechy diye gaye dabbe mein aapke saare products ka data hai. Isey copy kar ke mujhe chat mein bhej dein, main isey hamesha ke liye website mein fix kar dunga!</p>
+    <textarea id="output" style="width: 100%; height: 400px; padding: 10px;"></textarea>
+    <script>
+        const data = localStorage.getItem("binsaeed_products");
+        document.getElementById("output").value = data ? data : "Koi data nahi mila!";
+    </script>
+</body>
+</html>

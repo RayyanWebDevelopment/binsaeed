@@ -24,155 +24,180 @@ const fakeReviewsPool = [
 // Default Lawn articles database
 const defaultProducts = [
     {
-        id: 1,
-        name: "Lilac Embroidered Lawn 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/cover1.png",
-        images: ["images/New folder (21)/cover1.png", "images/New folder (21)/3.png", "images/New folder (21)/4.png", "images/New folder (21)/5.png"],
-        badge: "Hot Sale",
-        description: "Grace your wardrobe with this elegant 3 Piece Embroidered Lawn Suit, featuring premium lawn fabric, delicate floral prints, an embroidered neckline, sleeves, and hem, paired with a luxurious embroidered chiffon dupatta and matching lawn trousers. Perfect for summer, festive occasions, Eid, and everyday elegance.",
-        fabric: "100% Premium Lawn",
-        details: [
-            "Premium Lawn",
-            "3 Piece Suit",
-            "Embroidered Shirt",
-            "Embroidered Chiffon Dupatta",
-            "Lawn Trouser",
-            "Floral Print",
-            "Embroidered Neckline",
-            "Embroidered Sleeves",
-            "Embroidered Hem",
-            "Soft Fabric",
-            "Breathable Material",
-            "Summer Collection"
+        "id": 1,
+        "name": "Black & White Embroidered Lawn Suit",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.png",
+        "images": [
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/cover.png",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/6a2d5df0-0ba7-4724-b866-798b51e58928.png",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/9e514d99-deb9-4d76-b2a5-9a45f8d7ddbe.png",
+            "images/New folder (21)/Black & White Embroidered Lawn Suit/dc8124ed-1df2-4cf5-98b1-f7d5385ba547.png"
         ],
-        outOfStockSizes: []
-    },
-    {
-        id: 2,
-        name: "Maroon Embroidered Lawn 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/cover2.png",
-        images: ["images/New folder (21)/cover2.png"],
-        badge: "Hot Sale",
-        description: "Enhance your summer style with this striking Maroon 3 Piece Embroidered Lawn Suit. It comes with premium lawn fabric, exquisite thread and tilla embroidery on the shirt, paired with a matching printed dupatta and dyed trousers. Ideal for any festive occasion or formal gathering.",
-        fabric: "100% Premium Lawn",
-        details: [
+        "badge": "Hot Sale",
+        "description": "Grace your wardrobe with Black & White Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
             "Premium Lawn",
             "3 Piece Suit",
             "Embroidered Shirt",
-            "Printed Dupatta",
-            "Dyed Trouser",
-            "Elegant Embroidery",
-            "Festive Wear",
-            "Summer Collection"
-        ]
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
     },
     {
-        id: 3,
-        name: "Mustard Yellow Printed Lawn 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/cover3.png",
-        images: ["images/New folder (21)/cover3.png", "images/New folder (21)/cover3,2.png", "images/New folder (21)/cover3.3.png"],
-        badge: "Hot Sale",
-        description: "Brighten your day with this Mustard Yellow 3 Piece Printed Lawn Suit. Showcasing traditional block-print inspired patterns, this highly breathable outfit comes with a beautiful printed dupatta and soft dyed trousers. A perfect choice for the summer heat.",
-        fabric: "100% Premium Lawn",
-        details: [
-            "Premium Lawn",
-            "3 Piece Suit",
-            "Printed Shirt",
-            "Printed Dupatta",
-            "Dyed Trouser",
-            "Traditional Block Print",
-            "Casual Wear",
-            "Summer Collection"
-        ]
-    },
-    {
-        id: 4,
-        name: "Emerald Green Embroidered 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/cover.png",
-        images: ["images/New folder (21)/cover.png", "images/New folder (21)/8f48ded6-79b9-4347-abd8-576bfa05c581.png"],
-        badge: "Hot Sale",
-        description: "Make a statement with this rich Emerald Green 3 Piece Embroidered Suit. It features intricate resham thread embroidery along the neckline and borders, complemented by a block-printed cotton net dupatta and soft dyed trousers. The ultimate festive attire.",
-        fabric: "Premium Embroidered Lawn",
-        details: [
+        "id": 2,
+        "name": "Floral Embroidered Lawn Suit",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Floral Embroidered Lawn Suit/cover.png",
+        "images": [
+            "images/New folder (21)/Floral Embroidered Lawn Suit/cover.png",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/579f9a46-f13b-46dc-84f8-7fa2da9b3f43.png",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0 (1).png",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/75a559aa-1247-4d9b-9e70-81e968313ad0.png",
+            "images/New folder (21)/Floral Embroidered Lawn Suit/8f48ded6-79b9-4347-abd8-576bfa05c581.png"
+        ],
+        "badge": "New Arrival",
+        "description": "Grace your wardrobe with Floral Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
             "Premium Lawn",
             "3 Piece Suit",
             "Embroidered Shirt",
-            "Cotton Net Dupatta",
-            "Dyed Trouser",
-            "Resham Thread Work",
-            "Festive Wear",
-            "Summer Collection"
-        ]
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
     },
     {
-        id: 5,
-        name: "Lavender Jacquard 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/4114fa2d-21ab-4f7c-998a-62281ac38354.png",
-        images: ["images/New folder (21)/4114fa2d-21ab-4f7c-998a-62281ac38354.png", "images/New folder (21)/9434ac89-a47d-4a2b-8e9a-0e789d2bc35d.png", "images/New folder (21)/a20a1f0b-8aba-499e-b714-dd827922dd3b.png"],
-        badge: "Hot Sale",
-        description: "Experience the softness of our Lavender 3 Piece Self-Jacquard Lawn Suit. This outfit offers a delicate weave texture with subtle mirror-work style embroidery, paired with a gorgeous chiffon dupatta and matching trousers. Unmatched elegance for summer.",
-        fabric: "Self-Jacquard Lawn",
-        details: [
-            "Jacquard Lawn",
-            "3 Piece Suit",
-            "Embroidered Shirt",
-            "Chiffon Dupatta",
-            "Dyed Trouser",
-            "Delicate Embroidery",
-            "Semi Formal",
-            "Summer Collection"
-        ]
-    },
-    {
-        id: 6,
-        name: "Multi-Color Printed Lawn 3 Piece",
-        category: "embroidered",
-        categoryLabel: "Embroidered Collection",
-        price: 6500,
-        oldPrice: 8000,
-        image: "images/New folder (21)/7d2c62ff-8399-426f-908e-748016b01f70.png",
-        images: ["images/New folder (21)/7d2c62ff-8399-426f-908e-748016b01f70.png", "images/New folder (21)/e334e109-a592-472b-92fa-23c2c070e669.png", "images/New folder (21)/ef30992b-077c-49e9-b66c-083ae9a12c77.png"],
-        badge: "Hot Sale",
-        description: "Embrace a celebration of colors with this 3 Piece Geometric Printed Lawn Suit. This lively outfit features a stunning multicolored layout, paired with a lightweight voile dupatta and comfortable dyed trousers. Casual, trendy, and perfect for daily wear.",
-        fabric: "100% Premium Lawn",
-        details: [
+        "id": 3,
+        "name": "Maroon Embroidered Lawn Suit",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.png",
+        "images": [
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/cover.png",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/96800dea-a116-45f9-a19d-b99e1815aafb.png",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/9ff94a74-cc41-4723-b500-b893367e0ca3.png",
+            "images/New folder (21)/Maroon Embroidered Lawn Suit/ffe28d87-2bf1-434c-8410-7f31f5c41ede.png"
+        ],
+        "badge": "Hot Sale",
+        "description": "Grace your wardrobe with Maroon Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
             "Premium Lawn",
             "3 Piece Suit",
-            "Printed Shirt",
-            "Printed Voile Dupatta",
-            "Dyed Trouser",
-            "Geometric Patterns",
-            "Casual Wear",
-            "Summer Collection"
-        ]
+            "Embroidered Shirt",
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
+    },
+    {
+        "id": 4,
+        "name": "Navy Embroidered Lawn 3 Piece",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.png",
+        "images": [
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/cover.png",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/4114fa2d-21ab-4f7c-998a-62281ac38354.png",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/9434ac89-a47d-4a2b-8e9a-0e789d2bc35d.png",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/980a76b2-d69d-41b4-8bb2-67a731f50644.png",
+            "images/New folder (21)/Navy Embroidered Lawn 3 Piece/b337271b-bceb-4ac0-98da-f0304359dcf9.png"
+        ],
+        "badge": "New Arrival",
+        "description": "Grace your wardrobe with Navy Embroidered Lawn 3 Piece, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
+            "Premium Lawn",
+            "3 Piece Suit",
+            "Embroidered Shirt",
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
+    },
+    {
+        "id": 5,
+        "name": "Purple Embroidered Lawn Suit",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Purple Embroidered Lawn Suit/cover.png",
+        "images": [
+            "images/New folder (21)/Purple Embroidered Lawn Suit/cover.png",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/3.png",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/4.png",
+            "images/New folder (21)/Purple Embroidered Lawn Suit/5.png"
+        ],
+        "badge": "Hot Sale",
+        "description": "Grace your wardrobe with Purple Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
+            "Premium Lawn",
+            "3 Piece Suit",
+            "Embroidered Shirt",
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
+    },
+    {
+        "id": 6,
+        "name": "Teal Embroidered Lawn Suit",
+        "category": "embroidered",
+        "categoryLabel": "Embroidered Collection",
+        "price": 6500,
+        "oldPrice": 8000,
+        "image": "images/New folder (21)/Teal Embroidered Lawn Suit/cover.png",
+        "images": [
+            "images/New folder (21)/Teal Embroidered Lawn Suit/cover.png",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/1123123.png",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/123123.png",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/991576c9-e44b-48ef-ae3b-71191f07b4b3.png",
+            "images/New folder (21)/Teal Embroidered Lawn Suit/a20a1f0b-8aba-499e-b714-dd827922dd3b.png"
+        ],
+        "badge": "New Arrival",
+        "description": "Grace your wardrobe with Teal Embroidered Lawn Suit, featuring premium lawn fabric with intricate embroidery, paired with a matching dupatta and lawn trouser. Perfect for summer and festive occasions.",
+        "fabric": "100% Premium Lawn",
+        "details": [
+            "Premium Lawn",
+            "3 Piece Suit",
+            "Embroidered Shirt",
+            "Printed / Embroidered Dupatta",
+            "Lawn Trouser",
+            "Soft & Breathable Fabric",
+            "Summer Collection 2026"
+        ],
+        "outOfStockSizes": []
     }
 ];
 
-let products = JSON.parse(localStorage.getItem("binsaeed_products"));
-if (!products || products.length === 0) {
-    products = defaultProducts;
-    localStorage.setItem("binsaeed_products", JSON.stringify(products));
-}
+let products = defaultProducts;
+localStorage.setItem("binsaeed_products", JSON.stringify(products));
 
 // App State
 let cart = JSON.parse(localStorage.getItem("bin_saeed_cart")) || [];
@@ -210,7 +235,7 @@ function initializeDOMElements() {
 }
 
 // --- Initialization ---
-document.addEventListener("DOMContentLoaded", () => {
+function initApp() {
     initializeDOMElements();
     renderProducts();
     updateCartUI();
@@ -221,7 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
     cycleReviews();
     // Change reviews every 5 seconds
     setInterval(cycleReviews, 5000);
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initApp);
+} else {
+    initApp();
+}
 
 // --- Setup Event Listeners ---
 function setupEventListeners() {
@@ -459,10 +490,8 @@ function renderProducts(productsToRender = products) {
         // Remove out-of-stock check to guarantee all sizes are available
         const isSoldOut = false; // product.outOfStockSizes && product.outOfStockSizes.includes(size); && oosSizes.includes("M") && oosSizes.includes("L");
         
-        productCard.className = `product-card reveal ${isSoldOut ? 'sold-out' : ''}`;
+        productCard.className = `product-card reveal active ${isSoldOut ? 'sold-out' : ''}`;
         productCard.style.cursor = "pointer";
-        // Setup incremental delay for fade-in animations
-        productCard.style.transitionDelay = `${index * 0.05}s`;
 
         const priceHTML = product.oldPrice 
             ? `<span class="product-price">Rs. ${product.price.toLocaleString()}</span>
@@ -477,7 +506,7 @@ function renderProducts(productsToRender = products) {
         productCard.innerHTML = `
             <div class="product-image-container">
                 ${badgeHTML}
-                <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                <img src="${product.image}" alt="${product.name}" class="product-image" decoding="async">
             </div>
             <div class="product-info">
                 <span class="product-category">${product.categoryLabel}</span>
@@ -495,11 +524,8 @@ function renderProducts(productsToRender = products) {
         productsGrid.appendChild(productCard);
     });
 
-    // Run reveal animation check
-    setTimeout(() => {
-        const cards = productsGrid.querySelectorAll(".reveal");
-        cards.forEach(card => card.classList.add("active"));
-    }, 100);
+    const cards = productsGrid.querySelectorAll(".reveal");
+    cards.forEach(card => card.classList.add("active"));
 }
 
 // --- Cart Logic ---
@@ -615,7 +641,7 @@ function updateCartUI() {
 
     // Update prices and badges
     const shippingFee = 250;
-    cartTotalElement.textContent = `Rs. ${(total + shippingFee).toLocaleString()} (incl. 250 shipping)`;
+    cartTotalElement.textContent = total > 0 ? `Rs. ${(total + shippingFee).toLocaleString()}` : `Rs. 0`;
     
     if (itemCount > 0) {
         cartBadge.textContent = itemCount;
@@ -946,21 +972,30 @@ function handleSearch(e) {
 function setupScrollAnimations() {
     const reveals = document.querySelectorAll(".reveal");
     
+    // Instantly activate elements visible near viewport on page load
+    reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) {
+            el.classList.add("active");
+        }
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
-                // Option to unobserve after reveal
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.05,
+        rootMargin: "50px"
     });
 
     reveals.forEach(reveal => {
-        observer.observe(reveal);
+        if (!reveal.classList.contains("active")) {
+            observer.observe(reveal);
+        }
     });
 }
 
